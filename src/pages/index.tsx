@@ -8,7 +8,7 @@ const normalNabeatsuUrl: string = "https://www.geinou-research555.com/wp-content
 const ahoNabeatsuUrl: string = "https://powerfultrend.c.blog.ss-blog.jp/_images/blog/_d13/powerfultrend/r1.jpg"
 
 const Index: FC = () => {
-	const [number, setNumber] = useState<number>('')
+	const [number, setNumber] = useState<number>(0)
 	const [result, setResult] = useState<JSX.Element>()
 	const [valid, setValid] = useState<string>('')
 	const [isAbleToPressButton, setIsAbleToPressButton] = useState<boolean>(false)
