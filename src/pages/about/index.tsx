@@ -10,7 +10,7 @@ const Index: FC = () => {
 				<h1>当サイトについて</h1>
 				ただのジョークサイトです。
 				<div>ソースは<a href="https://github.com/rrih/nabeatsu">こちら</a></div>
-				<div>何かあれば<a href="https://github.com/rrih/nabeatsu/issue">こちら</a></div>
+				<div>何かあれば<a href="https://github.com/rrih/nabeatsu/issues/new">こちら</a></div>
 			</Layout>
 		</MuiThemeProvider>
 	)
