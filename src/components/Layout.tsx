@@ -32,6 +32,8 @@ export const Layout = ({ children, title = 'nabeatsu' }: Props) => (
 				{`.MuiButton-root.Mui-disabled { background-color: #95a7db !important;}`}
 				{/* ↓ボタン押せる時 */}
 				{`.MuiButton-root { color: white !important; background-color: #4169e1 !important;}`}
+				{/* font */}
+				{`font-family: { -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}`}
 			</style>
 		</Head>
 

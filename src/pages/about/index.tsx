@@ -8,8 +8,9 @@ const Index: FC = () => {
 		<MuiThemeProvider theme={theme}>
 			<Layout title="nabeatsu">
 				<h1>当サイトについて</h1>
-				<div>ソースコードは<a href="https://github.com/rrih/nabeatsu">こちら</a></div>
-				<div>author <a href="https://twitter.com/rrih_dev">@rrih_dev</a></div>
+				ただのジョークサイトです。
+				<div><a href="https://github.com/rrih/nabeatsu">ソースコード</a></div>
+				<div>何かあれば<a href="https://twitter.com/rrih_dev">@rrih_dev</a>まで</div>
 			</Layout>
 		</MuiThemeProvider>
 	)
