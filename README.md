@@ -1,4 +1,4 @@
 # nabeatsu
 
 ## author
-[@rrih_dev](https://twitter.com/rrih_dev)
+[@rrih](https://github.com/rrih)
