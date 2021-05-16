@@ -38,7 +38,7 @@ const Index: FC = () => {
 						<TextField
 							type="text"
 							onChange={(e: any) => {
-								if (isNaN(Number(e.target.value))) {
+								if (isNaN(Number(e.target.value)) || e.target.value === '') {
 									setIsAbleToPressButton(false)
 									setValid("半角数字を入力してください")
 								} else {
