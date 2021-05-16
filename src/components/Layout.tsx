@@ -23,7 +23,7 @@ export const Layout = ({ children, title = 'nabeatsu' }: Props) => (
 			<title>{title}</title>
 			<meta charSet="utf-8" />
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-			<meta name="description" content="Twitter Client" />
+			<meta name="description" content="3がつく数字か3の倍数でアホになります" />
 			<style>{`body { margin: 0 } /* custom! */`}</style>
 			<style>
 				{`.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-colorInherit { padding: 20px !important; } /* custom! */`}

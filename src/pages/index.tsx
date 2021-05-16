@@ -9,6 +9,7 @@ const ahoNabeatsuUrl: string = "https://powerfultrend.c.blog.ss-blog.jp/_images/
 const Index: FC = () => {
 	const [number, setNumber] = useState<number>(0)
 	const [result, setResult] = useState<JSX.Element>()
+	const [valid, setValid] = useState<string>('')
 
 	const isNabeatsu = (n: number): boolean => {
 		// 0, 整数判定
@@ -32,11 +33,21 @@ const Index: FC = () => {
 				<h1>nabeatsu</h1>
 				<div>3がつく数字か3の倍数でアホになります</div>
 				<div>
-					<TextField
-						type="text"
-						onChange={(e: any) => setNumber(e.target.value)}
-					/>
-					<Button onClick={aho} style={{backgroundColor: '#4169e1', color: 'white'}}>run</Button>
+					<div>
+						<TextField
+							type="text"
+							onChange={(e: any) => {
+								if (isNaN(Number(e.target.value))) {
+									setValid("半角数字を入力してください")
+								} else {
+									setValid('')
+									setNumber(e.target.value)
+								}
+							}}
+						/>
+						<Button onClick={aho} style={{backgroundColor: '#4169e1', color: 'white'}}>run</Button>
+					</div>
+						<small>{valid}</small>
 					{result}
 				</div>
 			</Layout>
