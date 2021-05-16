@@ -28,6 +28,10 @@ export const Layout = ({ children, title = 'nabeatsu' }: Props) => (
 			<style>
 				{`.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-colorInherit { padding: 20px !important; } /* custom! */`}
 				{`.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters { padding: 0 !important; } /* custom! */`}
+				{/* ↓ボタン押せない時 */}
+				{`.MuiButton-root.Mui-disabled { background-color: #95a7db !important;}`}
+				{/* ↓ボタン押せる時 */}
+				{`.MuiButton-root { color: white !important; background-color: #4169e1 !important;}`}
 			</style>
 		</Head>
 

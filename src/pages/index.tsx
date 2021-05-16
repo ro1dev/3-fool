@@ -2,14 +2,16 @@ import React, { FC, useState } from 'react'
 import { theme } from '../utils/theme'
 import { Layout } from '../components/Layout'
 import { MuiThemeProvider, Button, TextField } from '@material-ui/core'
+import styled from "styled-components";
 
 const normalNabeatsuUrl: string = "https://www.geinou-research555.com/wp-content/uploads/2018/09/4bf16c730bca95aa0ca4a6902100d3fb.jpg"
 const ahoNabeatsuUrl: string = "https://powerfultrend.c.blog.ss-blog.jp/_images/blog/_d13/powerfultrend/r1.jpg"
 
 const Index: FC = () => {
-	const [number, setNumber] = useState<number>(0)
+	const [number, setNumber] = useState<number>('')
 	const [result, setResult] = useState<JSX.Element>()
 	const [valid, setValid] = useState<string>('')
+	const [isAbleToPressButton, setIsAbleToPressButton] = useState<boolean>(false)
 
 	const isNabeatsu = (n: number): boolean => {
 		// 0, 整数判定
@@ -38,14 +40,25 @@ const Index: FC = () => {
 							type="text"
 							onChange={(e: any) => {
 								if (isNaN(Number(e.target.value))) {
+									setIsAbleToPressButton(false)
 									setValid("半角数字を入力してください")
 								} else {
+									setIsAbleToPressButton(true)
 									setValid('')
 									setNumber(e.target.value)
 								}
 							}}
 						/>
-						<Button onClick={aho} style={{backgroundColor: '#4169e1', color: 'white'}}>run</Button>
+						<StyledButton
+							onClick={aho}
+							// style={{
+							// 	backgroundColor: '#4169e1',
+							// 	color: 'white',
+							// }}
+							disabled={!isAbleToPressButton}
+						>
+							run
+						</StyledButton>
 					</div>
 						<small>{valid}</small>
 					{result}
@@ -56,3 +69,10 @@ const Index: FC = () => {
 }
 
 export default Index
+
+const StyledButton = styled(Button)`
+	// 押せない時
+	.MuiButton-root.Mui-disabled {
+		background-color: red !important;
+	}
+`
