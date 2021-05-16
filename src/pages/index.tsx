@@ -2,7 +2,6 @@ import React, { FC, useState } from 'react'
 import { theme } from '../utils/theme'
 import { Layout } from '../components/Layout'
 import { MuiThemeProvider, Button, TextField } from '@material-ui/core'
-import styled from "styled-components";
 
 const normalNabeatsuUrl: string = "https://www.geinou-research555.com/wp-content/uploads/2018/09/4bf16c730bca95aa0ca4a6902100d3fb.jpg"
 const ahoNabeatsuUrl: string = "https://powerfultrend.c.blog.ss-blog.jp/_images/blog/_d13/powerfultrend/r1.jpg"
