@@ -25,7 +25,7 @@ const Index: FC = () => {
 
 	const aho = () => {
 		const url: string = isNabeatsu(number) ? ahoNabeatsuUrl : normalNabeatsuUrl
-		const dom: JSX.Element = <div style={{padding: '10%'}}><img src={url} alt="nabeatsu" style={{height: '50vh'}}/></div>
+		const dom: JSX.Element = <div style={{padding: '10%'}}><div>\ {number} /</div><img src={url} alt="nabeatsu" style={{height: '50vh'}}/></div>
 		setResult(dom)
 	}
 
@@ -49,18 +49,14 @@ const Index: FC = () => {
 								}
 							}}
 						/>
-						<StyledButton
+						<Button
 							onClick={aho}
-							// style={{
-							// 	backgroundColor: '#4169e1',
-							// 	color: 'white',
-							// }}
 							disabled={!isAbleToPressButton}
 						>
 							run
-						</StyledButton>
+						</Button>
 					</div>
-						<small>{valid}</small>
+					<small>{valid}</small>
 					{result}
 				</div>
 			</Layout>
@@ -69,10 +65,3 @@ const Index: FC = () => {
 }
 
 export default Index
-
-const StyledButton = styled(Button)`
-	// 押せない時
-	.MuiButton-root.Mui-disabled {
-		background-color: red !important;
-	}
-`
