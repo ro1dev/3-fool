@@ -37,7 +37,7 @@ const Index: FC = () => {
 			<div style={{padding: '10%'}}>
 				<div style={{margin: '10px'}}>
 					<a
-						href={`https://twitter.com/intent/tweet?text=${ahoString}&url=https://nabeatsu.vercel.app`}
+						href={`https://twitter.com/intent/tweet?text=${ahoString}&url=https://3-fool.vercel.app`}
 						style={{border: 'none', padding: '15px', color: 'white', backgroundColor: '#4169e1', textDecoration: 'none', borderRadius: '25px', boxShadow: "0 1px 3px rgb(0 0 0 / 15%)", outline: 'none'}}
 					>
 						ツイートする
@@ -61,7 +61,7 @@ const Index: FC = () => {
 						<TextField
 							type="text"
 							onChange={(e: any) => {
-								if (isNaN(Number(e.target.value)) || e.target.value === '' || number == null) {
+								if (isNaN(Number(e.target.value)) || (e.target.value === '')) {
 									setIsAbleToPressButton(false)
 									setValid("半角数字を入力してください")
 								} else {
