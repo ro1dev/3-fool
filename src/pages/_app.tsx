@@ -7,6 +7,10 @@ const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     // Google Analyticsをページ遷移時にも対応させる
     const router = useRouter();
     useEffect(() => {
+        const jssStyles = document.querySelector('#jss-server-side');
+        if (jssStyles != null && jssStyles.parentElement != null) {
+            jssStyles.parentElement.removeChild(jssStyles);
+        }
         const handleRouteChange = (url: string) => {
             pageview(url);
         };
