@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import { theme } from '../utils/theme'
 import { Layout } from '../components/Layout'
 import { MuiThemeProvider, Button, TextField } from '@material-ui/core'
+import { nabeatsu } from "nabeatsu";
 
 const normalNabeatsuUrl: string = "https://www.geinou-research555.com/wp-content/uploads/2018/09/4bf16c730bca95aa0ca4a6902100d3fb.jpg"
 const ahoNabeatsuUrl: string = "https://powerfultrend.c.blog.ss-blog.jp/_images/blog/_d13/powerfultrend/r1.jpg"
@@ -12,6 +13,10 @@ const Index: FC = () => {
 	const [valid, setValid] = useState<string>('')
 	const [isAbleToPressButton, setIsAbleToPressButton] = useState<boolean>(false)
 
+	/**
+	 * アホ(3の倍数 or 3のつく数)か、そうでないかの判定
+	 * @param n number
+	 */
 	const isNabeatsu = (n: number): boolean => {
 		// 0, 整数判定
 		if (!Number.isInteger(Number(n)) || Number(n) == 0) {
@@ -22,11 +27,16 @@ const Index: FC = () => {
 		return isMultipleOfThree || isContainedStringThree
 	}
 
-	const aho = () => {
+	/**
+	 * ナベアツの通常画像とアホ画像を差し替えて dom を返す関数
+	 */
+	const aho = (): void => {
 		const url: string = isNabeatsu(number) ? ahoNabeatsuUrl : normalNabeatsuUrl
-		const dom: JSX.Element = <div style={{padding: '10%'}}><div>\ {number} /</div><img src={url} alt="nabeatsu" style={{height: '50vh'}}/></div>
+		const ahoString = nabeatsu(number)
+		const dom: JSX.Element = <div style={{padding: '10%'}}><div>{ahoString}</div><img src={url} alt="nabeatsu" style={{height: '50vh'}}/></div>
 		setResult(dom)
 	}
+
 
 	return (
 		<MuiThemeProvider theme={theme}>
