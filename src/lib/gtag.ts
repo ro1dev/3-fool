@@ -9,14 +9,14 @@ export const pageview = (url: string): void => {
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-type GaEventProps = {
-    action: string;
-    category: string;
-    label: string;
-    value?: number;
-};
+// type GaEventProps = {
+//     action: string;
+//     category: string;
+//     label: string;
+//     value?: number;
+// };
 
-export const event = ({ action, category, label, value }: GaEventProps): void => {
+export const event = (action: string, category: string, label: string, value: string ): void => {
     if (!GA_TRACKING_ID) return;
     window.gtag('event', action, {
         event_category: category,

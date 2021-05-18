@@ -9,7 +9,7 @@ import List from '@material-ui/core/List'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import { Footer, Root } from '../utils'
+import { Root } from '../utils'
 import { url } from '../utils/url'
 
 type Props = {
