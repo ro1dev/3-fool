@@ -33,7 +33,20 @@ const Index: FC = () => {
 	const aho = (): void => {
 		const url: string = isNabeatsu(number) ? ahoNabeatsuUrl : normalNabeatsuUrl
 		const ahoString = nabeatsu(number)
-		const dom: JSX.Element = <div style={{padding: '10%'}}><div>{ahoString}</div><img src={url} alt="nabeatsu" style={{height: '50vh'}}/></div>
+		const dom: JSX.Element = (
+			<div style={{padding: '10%'}}>
+				<div style={{margin: '10px'}}>
+					<a
+						href={`https://twitter.com/intent/tweet?via=roiroidev&text=${ahoString}&url=https://nabeatsu.vercel.app`}
+						style={{border: 'none', padding: '15px', color: 'white', backgroundColor: '#4169e1', textDecoration: 'none', borderRadius: '25px', boxShadow: "0 1px 3px rgb(0 0 0 / 15%)", outline: 'none'}}
+					>
+						ツイートする
+					</a>
+				</div>
+				<h2 style={{margin: '40px'}}>{ahoString}</h2>
+				<img src={url} alt="nabeatsu" style={{height: '50vh'}}/>
+			</div>
+		)
 		setResult(dom)
 	}
 

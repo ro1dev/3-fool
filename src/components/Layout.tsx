@@ -46,11 +46,6 @@ export const Layout = ({ children, title = 'nabeatsu' }: Props) => (
 		<div style={{textAlign: "center", height: '85%'}}>
 			{children}
 		</div>
-		{/* フッター */}
-		<Footer>
-			<hr />
-			&copy; nabeatsu
-		</Footer>
 	</Root>
 )
 
