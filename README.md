@@ -1,4 +1,4 @@
-# nabeatsu
+# 3-fool
 
 web site -> [3-fool.vercel.app](https://3-fool.vercel.app)
 
